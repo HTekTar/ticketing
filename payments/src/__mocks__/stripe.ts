@@ -2,6 +2,6 @@ export const stripe = {
   charges:{
     create: jest
       .fn()
-      .mockResolvedValue({}),
+      .mockResolvedValue({id: "test_stripe_id"}),
   },
 };
