@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 import { app } from './app';
 
 const start = async()=>{
+  console.log('Starting up ... ');
+
   if(!process.env.JWT_KEY){
     throw new Error('JWT key not defined');
   }
@@ -13,6 +15,7 @@ const start = async()=>{
     console.log('connected to mongoDB');
     
     app.listen(3000, ()=>{
+      console.log('I am back baby!');
       console.log('auth listening on port 3000!!');
     });
   } catch (error) {
